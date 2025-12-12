@@ -1,13 +1,11 @@
 ﻿import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import Header from "@/components/layout/Header/Header";
-import Footer from "@/components/layout/Footer/Footer";
 
 // متادیتاهای SEO
 export const metadata: Metadata = {
   title: "VyStack | طراحی و توسعه وبسایت حرفهای",
-  description: "تیم تخصصی VyStack - طراحی سایت توسعه وباپلیکیشن سئو و دیجیتال مارکتینگ",
+  description: "تیم تخصصی VyStack - طراحی سایت توسعه وباپلیکیشن، سئو و دیجیتال مارکتینگ",
   keywords: ["طراحی سایت", "توسعه وب", "سئو", "دیجیتال مارکتینگ", "React", "Next.js"],
   authors: [{ name: "VyStack Team" }],
   creator: "VyStack",
@@ -33,7 +31,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "VyStack | طراحی وب حرفه‌ای",
+        alt: "VyStack | طراحی وب حرفهای",
       },
     ],
   },
@@ -90,15 +88,9 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="bg-background text-foreground min-h-screen font-sans antialiased">
+      <body className="bg-background text-foreground min-h-screen font-sans">
         <ThemeProvider>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1 pt-20"> {/* pt-20 برای فاصله از هدر fixed */}
-              {children}
-            </main>
-            <Footer />
-          </div>
+          {children}
         </ThemeProvider>
       </body>
     </html>
